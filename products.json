@@ -1,0 +1,50 @@
+[  
+    {   "name" : "Purse",
+        "description" : "Clutch purse that goes with dinner dresses",
+        "price" : " $300.00",
+        "category" : "accessories"
+    },
+
+    {   "name" : "Iphone 13",
+        "description" : "High performance mobile phone with advanced tech",
+        "price" : " $700.00",
+        "category" : "mobile phone"
+    },
+
+    {   "name" : "Hp Envy x360 ",
+        "description" : "Touch screen laptop for everyday work",
+        "price" : " $1000.00",
+        "category" : "laptops"
+    },
+
+    {   "name" : " Gold necklace ",
+        "description" : "A shiny luxury golden necklace to enhance your outfit",
+        "price" : " $300.00",
+        "category" : "clothing, accessories"
+    },
+
+    {   "name" : " Nivea cocoa lotion",
+        "description" : "A cocoa infused moisturizing body lotion",
+        "price" : " $10.00",
+        "category" : "household, bodycare"
+    },
+
+    {   "name" : "Coffee mug",
+        "description" : "A brown coffee mug for your tea",
+        "price" : "$5.00 ",
+        "category" : "household"
+    },
+
+    {   "name" : "Jumbo Water bottle",
+        "description" : "A special jumbo water bottle for your jumbo days",
+        "price" : "$25.00 ",
+        "category" : "household, school item"
+    },
+
+    {   "name" : "Nike shoes",
+        "description" : "The best shoes for your everyday sport",
+        "price" : "$200.00 ",
+        "category" : "clothing, luxury"
+    }
+
+]

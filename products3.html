@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{ 
+            display: block;
+            margin: 10px 0;
+        }
+        nav a { 
+            margin-right: 7px;
+        }
+    </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+    crossorigin="anonymous"></script>
+<body>
+
+    <nav>
+        <a href="products1.html">Products 1</a>
+        <a href="products2.html">Products 2</a>
+        <a href="#">Products 3</a>
+    </nav>
+    
+    <h1>Products3.html</h1>
+    <button id = "btn">Filter</button>
+    <select name="category" id="drpdwn">
+        <option value="" >Choose an option</option>
+    </select>
+    
+
+    <script>
+        var select = $("#drpdwn");    
+        var btn = $("#btn");
+
+        category = [];
+        $.get("./products.json", function (data) { 
+            str = JSON.parse(JSON.stringify(data));  
+            for (i = 0; i < str.length; i++) { 
+                newCategory = str[i].category; 
+                //If there is a comma, there are two categories so break it down
+                if (newCategory.includes(",")){ 
+                    subCategory1 = newCategory.slice(0, newCategory.indexOf(","));
+                    subCategory2 = newCategory.slice(newCategory.indexOf(",")+1, newCategory.length);
+
+                    if (!category.includes(subCategory1)) { 
+                        category.push(subCategory1)
+                    } 
+                    if (!category.includes(subCategory2)) { 
+                        category.push(subCategory2)
+                    } 
+                    
+                    console.log("sub",subCategory1)
+                    console.log("sub2",subCategory2)
+                }
+                //Only add a category if it has not previously been added
+                else if(!category.includes(newCategory)){ 
+                    category.push(newCategory);
+                }
+                
+            }
+            console.log(category)
+            $.each(category,  function(index, value){ 
+                var option = $("<option></option>") 
+                .attr("value", value)
+                .text(value)
+                select.append(option); 
+            })
+            console.log(select.html());
+        });
+        var selected; // Variable to keep track of selected category
+        select.on('change', function() { 
+            selected  = $(this).val();
+            console.log("selected: ", selected)
+        }) 
+        var display = $ ("<div></div>")
+        $("body").append(display);
+        btn.click( function(event) {
+            display.html("");
+            for (i = 0; i < str.length; i++) { 
+                // document.write (selected)
+               
+                if(str[i].category.includes(selected)) { 
+                    display.append(str[i].name + "<br>")
+                }
+
+            }
+            
+        })
+        
+
+
+    </script>
+</body>
+</htm

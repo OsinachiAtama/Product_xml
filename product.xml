@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href = "./product.css" ?>
+<product>
+    <item>
+        <Name> Purse </Name>
+        <Description> Clutch purse that goes with dinner dresses</Description>
+        <Price> $300.00 </Price>
+        <Category> accessories </Category> 
+    </item>
+
+    <item>
+        <Name> Iphone 13 </Name>
+        <Description> High performance mobile phone with advanced tech</Description>
+        <Price> $700.00 </Price>
+        <Category> Mobile phone </Category>
+    </item> 
+
+    <item>
+        <Name> Hp Envy x360 </Name>
+        <Description> Touch screen laptop for everyday work </Description>
+        <Price> $1000.00 </Price>
+        <Category> Laptops</Category>
+    </item> 
+
+    <item>
+        <Name> Gold necklace</Name>
+        <Description> 
+        A shiny luxury golden necklace to enhance your outfit 
+        </Description>
+        <Price> $300.00 </Price>
+        <Category>clothing, accessories </Category>
+    </item> 
+
+    <item>
+        <Name> Nivea cocoa lotion </Name>
+        <Description> A cocoa infused moisturizing body lotion</Description>
+        <Price> $10.00 </Price>
+        <Category>household, bodycare</Category>
+    </item> 
+
+    <item>
+        <Name>Coffee mug </Name>
+        <Description> A brown coffee mug for your tea</Description>
+        <Price> $5.00 </Price>
+        <Category> household </Category>
+    </item> 
+
+    <item>
+        <Name> NKJV Bible </Name>
+        <Description> The holy book of the Christians</Description>
+        <Price> $50.00 </Price>
+        <Category> Books </Category>
+    </item> 
+
+    <item>
+        <Name> Laundary iron</Name>
+        <Description> A laundary iron to stretch your classes </Description>
+        <Price>$25.00</Price>
+        <Category> </Category>
+    </item> 
+
+</product>
+

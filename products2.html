@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{ 
+            display: block;
+            margin: 10px 0;
+        }
+        nav a { 
+            margin-right: 7px;
+        }
+
+        body { 
+            margin: 20px;
+            padding: 20px ;
+        }
+        #result { 
+            position: relative;
+            margin: 70px 0px;
+        }
+        #btn { 
+            width: 120px;
+            display: block;
+            background-color:brown;
+            color: white;
+            margin: px 0;
+            padding : 10px;
+            font-size: 20px;
+            position: absolute;
+           
+        }
+        .product { 
+            color: black;
+            font-family: 'Lucida Sans';
+            margin: 15px 0px;
+        }
+        .name { 
+            font-size: 1.4em;
+            color: brown;
+            font-weight: 400;
+        }
+
+    </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+    crossorigin="anonymous"></script>
+<body>
+    <nav>
+        <a href="products1.html">Products 1</a>
+        <a href="#">Products 2</a>
+        <a href="products3.html">Products 3</a>
+    </nav>
+
+    <h1>Products2.html</h1>
+
+    <button id = "btn"> Get button </button>
+    <div id = "result"></div>
+    <script>
+        var result_div = document.getElementById("result")
+        var button = document.getElementById("btn")
+        // document.write(button)
+        btn.addEventListener('click', function(event) {
+            $.get("./products.json", function (data) { 
+                str = JSON.parse(JSON.stringify(data));  
+                              
+                for (i = 0; i < str.length; i++) { 
+                    // document.write(str[i]);
+                    var product = document.createElement("div")
+                    product.classList.add("product");
+                    product.innerHTML = 
+                        "<span class = 'name'>" + str[i].name + "</span>" + "<br>" +
+                        "<span class = 'description'>" + str[i].description + "</span>" +"<br>" +
+                        "<span class = 'price'>" + "Price: "+ str[i].price + "</span>" + "<br>" + 
+                        "<span class = 'category'>" +"Category: "+ str[i].category + "</span>" + "<br>"
+                    result_div.appendChild(product)
+                    console.log(result_div.innerHTML)
+                }
+            }) 
+        })
+    </script>
+</body>
+</html>
